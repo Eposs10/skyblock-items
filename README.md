@@ -6,3 +6,5 @@ Fabric Guide: https://fabricmc.net/wiki/install
 Items: https://hypixel.net/
 
 Textures: https://furfsky.net/
+
+use `/recipe give @s *` to get all recipes
