@@ -1,5 +1,4 @@
-# skyblock-items
-__Hpyixel Skyblock Items (Fabric 1.20.1)__
+# Hpyixel Skyblock Items (Fabric 1.20.1)
 
 Fabric Guide: https://fabricmc.net/wiki/install
 
