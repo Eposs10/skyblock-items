@@ -10,4 +10,4 @@ use `/recipe give @s *` to get all recipes
 
 Feedback: Discord @eposs
 
-Release Anncounement: https://discord.gg/AjnHNV5Gt7 
+Updates: https://discord.gg/AjnHNV5Gt7 
