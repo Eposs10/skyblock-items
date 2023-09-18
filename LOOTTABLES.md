@@ -8,6 +8,8 @@ public class MobLootTableModifiers {
     private static final Identifier ENDERMAN_ID = new Identifier("minecraft", "entities/enderman");
     private static final Identifier ENDER_DRAGON_ID = new Identifier("minecraft", "entities/ender_dragon");
     private static final Identifier POLAR_BEAR_ID = new Identifier("minecraft", "entities/polar_bear");
+    private static final Identifier IRON_GOLEM_ID = new Identifier("minecraft", "entities/iron_golem");
+    private static final Identifier ELDER_GUARDIAN_ID = new Identifier("minecraft", "entities/elder_guardian");
 
     private static final Identifier BASTION_TREASURE_ID = new Identifier("minecraft", "chests/bastion_treasure");
     private static final Identifier BASTION_OTHER_ID = new Identifier("minecraft", "chests/bastion_other");
@@ -79,58 +81,56 @@ public class MobLootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if (BASTION_TREASURE_ID.equals(id)) {
+            if (IRON_GOLEM_ID.equals(id)) {
                 var poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(2))
-                        .conditionally(RandomChanceLootCondition.builder(0.2f))   // Drop Chance 1 = 100%
-                        .with(ItemEntry.builder(ModItems.DIAMANTE_HANDLE)) // Item
-                        .with(ItemEntry.builder(ModItems.LASR_EYE)) // Item
-                        .with(ItemEntry.builder(ModItems.BIGFOOT_LASSO)) // Item
-                        .with(ItemEntry.builder(ModItems.JOLLY_PINK_ROCK)) // Item
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build()); // Item count
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.01f))   // Drop Chance 1 = 100%
+                        .with(ItemEntry.builder(ModItems.GOLEM_ROSE)) // Item
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build()); // Item count
 
                 tableBuilder.pool(poolBuilder.build());
+            }
+
+            if (ELDER_GUARDIAN_ID.equals(id)) {
+                var poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.5f))   // Drop Chance 1 = 100%
+                        .with(ItemEntry.builder(ModItems.DARK_HANDLE)) // Item
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build()); // Item count
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+
+
+            if (BASTION_TREASURE_ID.equals(id)) {
+                witherUpgradeItemsLoot(tableBuilder, 3.0f);
             }
 
             if (BASTION_HOGLIN_STABLE_ID.equals(id)) {
-                var poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.2f))   // Drop Chance 1 = 100%
-                        .with(ItemEntry.builder(ModItems.DIAMANTE_HANDLE)) // Item
-                        .with(ItemEntry.builder(ModItems.LASR_EYE)) // Item
-                        .with(ItemEntry.builder(ModItems.BIGFOOT_LASSO)) // Item
-                        .with(ItemEntry.builder(ModItems.JOLLY_PINK_ROCK)) // Item
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build()); // Item count
-
-                tableBuilder.pool(poolBuilder.build());
+                witherUpgradeItemsLoot(tableBuilder, 2.0f);
             }
 
             if (BASTION_bridge_ID.equals(id)) {
-                var poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.2f))   // Drop Chance 1 = 100%
-                        .with(ItemEntry.builder(ModItems.DIAMANTE_HANDLE)) // Item
-                        .with(ItemEntry.builder(ModItems.LASR_EYE)) // Item
-                        .with(ItemEntry.builder(ModItems.BIGFOOT_LASSO)) // Item
-                        .with(ItemEntry.builder(ModItems.JOLLY_PINK_ROCK)) // Item
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build()); // Item count
-
-                tableBuilder.pool(poolBuilder.build());
+                witherUpgradeItemsLoot(tableBuilder, 2.0f);
             }
 
             if (BASTION_OTHER_ID.equals(id)) {
-                var poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.2f))   // Drop Chance 1 = 100%
-                        .with(ItemEntry.builder(ModItems.DIAMANTE_HANDLE)) // Item
-                        .with(ItemEntry.builder(ModItems.LASR_EYE)) // Item
-                        .with(ItemEntry.builder(ModItems.BIGFOOT_LASSO)) // Item
-                        .with(ItemEntry.builder(ModItems.JOLLY_PINK_ROCK)) // Item
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build()); // Item count
-
-                tableBuilder.pool(poolBuilder.build());
+                witherUpgradeItemsLoot(tableBuilder, 2.0f);
             }
         }));
     }
-}
 
+    private static void witherUpgradeItemsLoot(LootTable.Builder tableBuilder, float maxCount) {
+        var poolBuilder = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.2f))   // Drop Chance 1 = 100%
+                .with(ItemEntry.builder(ModItems.DIAMANTE_HANDLE)) // Item
+                .with(ItemEntry.builder(ModItems.LASR_EYE)) // Item
+                .with(ItemEntry.builder(ModItems.BIGFOOT_LASSO)) // Item
+                .with(ItemEntry.builder(ModItems.JOLLY_PINK_ROCK)) // Item
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, maxCount)).build()); // Item count
+
+        tableBuilder.pool(poolBuilder.build());
+    }
+}
