@@ -27,9 +27,9 @@
     public static final Item DARK_CLAYMORE = registerItem("dark_claymore",
             new WeaponWithRarity(ModItemMaterial.DRAGON_FRAGMENT, 9, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "SUPREME", "DUNGEON LONGSWORD"));
 
-    public static final Item NECON_BLADE = registerItem("necron_blade",
+    public static final Item NECRON_BLADE = registerItem("necron_blade",
             new NecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
-    public static final Item NECON_BLADE_SCROLLED = registerItem("necron_blade_scrolled",
+    public static final Item NECRON_BLADE_SCROLLED = registerItem("necron_blade_scrolled",
             new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC", "DUNGEON SWORD"));
     public static final Item HYPERION = registerItem("hyperion",
             new NecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
