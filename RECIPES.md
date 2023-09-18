@@ -20,6 +20,17 @@
 
         recipe8x1(exporter, ModItems.FLOWER_OF_TRUTH, Items.WITHER_ROSE, ModItems.ANCIENT_ROSE, RecipeCategory.COMBAT);
 
+        offerNetheriteLikeUpgradeRecipe(exporter, ModItems.ASPECT_OF_THE_DRAGONS, ModItems.GOLEM_ROSE, ModItems.ANCIENT_ROSE, RecipeCategory.COMBAT, ModItems.GIANT_SWORD);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DARK_BLADE, 1)
+                .pattern("  #")
+                .pattern(" # ")
+                .pattern("#  ")
+                .input('#', Blocks.NETHERITE_BLOCK)
+                .criterion(hasItem(Blocks.NETHERITE_BLOCK), conditionsFromItem(Blocks.NETHERITE_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.DARK_BLADE)));
+
+        offerNetheriteLikeUpgradeRecipe(exporter, ModItems.GIANT_SWORD, ModItems.DARK_HANDLE, ModItems.DARK_BLADE, RecipeCategory.COMBAT, ModItems.DARK_CLAYMORE);
 
         addScrollsToWitherBlade(exporter, ModItems.VALKYRIE_SCROLLED, ModItems.VALKYRIE);
         addScrollsToWitherBlade(exporter, ModItems.HYPERION_SCROLLED, ModItems.HYPERION);
