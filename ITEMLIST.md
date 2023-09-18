@@ -22,31 +22,31 @@
             new WeaponWithRarity(ModItemMaterial.ZERO_POINT_FIVE_DIA, 2, -2.4f, new FabricItemSettings().maxCount(1), "LEGENDARY", "SWORD"));
 
     public static final Item GIANT_SWORD = registerItem("giant_sword",
-            new WeaponWithRarity(ModItemMaterial.DRAGON_FRAGMENT, 7, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON LONGSWORD"));
+            new WeaponWithRarity(ModItemMaterial.DRAGON_FRAGMENT, 7, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC", "DUNGEON LONGSWORD"));
 
     public static final Item DARK_CLAYMORE = registerItem("dark_claymore",
-            new WeaponWithRarity(ModItemMaterial.DRAGON_FRAGMENT, 9, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON LONGSWORD"));
+            new WeaponWithRarity(ModItemMaterial.DRAGON_FRAGMENT, 9, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "SUPREME", "DUNGEON LONGSWORD"));
 
     public static final Item NECON_BLADE = registerItem("necron_blade",
             new NecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
     public static final Item NECON_BLADE_SCROLLED = registerItem("necron_blade_scrolled",
-            new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
+            new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC", "DUNGEON SWORD"));
     public static final Item HYPERION = registerItem("hyperion",
             new NecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
     public static final Item HYPERION_SCROLLED = registerItem("hyperion_scrolled",
-            new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
+            new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC", "DUNGEON SWORD"));
     public static final Item ASTRAEA = registerItem("astraea",
             new NecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
     public static final Item ASTRAEA_SCROLLED = registerItem("astraea_scrolled",
-            new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
+            new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC", "DUNGEON SWORD"));
     public static final Item VALKYRIE = registerItem("valkyrie",
             new NecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
     public static final Item VALKYRIE_SCROLLED = registerItem("valkyrie_scrolled",
-            new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
+            new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC", "DUNGEON SWORD"));
     public static final Item SCYLLA = registerItem("scylla",
             new NecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
     public static final Item SCYLLA_SCROLLED = registerItem("scylla_scrolled",
-            new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "DUNGEON SWORD"));
+            new ScrolledNecronBlades(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC", "DUNGEON SWORD"));
 
 
     public static final Item JUJU_SHORTBOW = registerItem("juju_shortbow", new JujuShortbow(new FabricItemSettings().maxCount(1)));
@@ -72,40 +72,40 @@
             new ArmorItemWithRarity(ModArmorMaterials.WITHER, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "LEGENDARY", true));
 
     public static final Item NECRON_HELMET = registerItem("necron_helmet",
-            new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item NECRON_CHESTPLATE = registerItem("necron_chestplate",
-            new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item NECRON_LEGGINGS = registerItem("necron_leggings",
-            new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item NECRON_BOOTS = registerItem("necron_boots",
-            new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "MYTHIC", true));
 
     public static final Item STORM_HELMET = registerItem("storm_helmet",
-            new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item STORM_CHESTPLATE = registerItem("storm_chestplate",
-            new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item STORM_LEGGINGS = registerItem("storm_leggings",
-            new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item STORM_BOOTS = registerItem("storm_boots",
-            new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "MYTHIC", true));
 
     public static final Item MAXOR_HELMET = registerItem("maxor_helmet",
-            new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item MAXOR_CHESTPLATE = registerItem("maxor_chestplate",
-            new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item MAXOR_LEGGINGS = registerItem("maxor_leggings",
-            new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item MAXOR_BOOTS = registerItem("maxor_boots",
-            new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "MYTHIC", true));
 
     public static final Item GOLDOR_HELMET = registerItem("goldor_helmet",
-            new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item GOLDOR_CHESTPLATE = registerItem("goldor_chestplate",
-            new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item GOLDOR_LEGGINGS = registerItem("goldor_leggings",
-            new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item GOLDOR_BOOTS = registerItem("goldor_boots",
-            new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "LEGENDARY", true));
+            new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "MYTHIC", true));
 
 
     public static final Item ABSOLUTE_ENDER_PEARL = registerItem("absolute_ender_pearl",
@@ -128,14 +128,17 @@
     public static final Item DRAGON_FRAGMENT = registerItem("dragon_fragment", new ItemWithRarity(new FabricItemSettings().fireproof(), "EPIC", "ITEM"));
 
     public static final Item ANCIENT_ROSE = registerItem("ancient_rose", new ItemWithRarity(new FabricItemSettings().fireproof(), "UNCOMMON", "DUNGEON ITEM"));
+    public static final Item GOLEM_ROSE = registerItem("golem_rose", new ItemWithRarity(new FabricItemSettings().fireproof(), "RARE", "ITEM"));
 
     public static final Item GOLDEN_POWDER = registerItem("golden_powder", new ItemWithRarity(new FabricItemSettings().fireproof(), "RARE", "ITEM"));
 
     public static final Item SPELL_POWDER = registerItem("spell_powder", new ItemWithRarity(new FabricItemSettings().fireproof(), "UNCOMMON", "ITEM"));
 
-    public static final Item JUDGEMENT_CORE = registerItem("judgement_core", new ItemWithRarity(new FabricItemSettings().fireproof(), "LEGENDARY", "ITEM"));
-
     public static final Item TRUE_ICE = registerItem("true_ice", new ItemWithRarity(new FabricItemSettings().fireproof(), "RARE", "ITEM"));
 
-    public static final Item RECOMBOBULATOR_3000 = registerItem("recombobulator_3000", new ItemWithRarity(new FabricItemSettings(), "LEGENDARY", "DUNGEON ITEM"));
-```
+    public static final Item JUDGEMENT_CORE = registerItem("judgement_core", new ItemWithRarity(new FabricItemSettings().fireproof(), "MYTHIC", "ITEM"));
+
+    public static final Item DARK_HANDLE = registerItem("dark_handle", new ItemWithRarity(new FabricItemSettings().fireproof(), "SUPREME", "ITEM"));
+    public static final Item DARK_BLADE = registerItem("dark_blade", new ItemWithRarity(new FabricItemSettings().fireproof(), "SUPREME", "ITEM"));
+
+    public static final Item RECOMBOBULATOR_3000 = registerItem("recombobulator_3000", new ItemWithRarity(new FabricItemSettings(), "SPECIAL", "DUNGEON ITEM"));
