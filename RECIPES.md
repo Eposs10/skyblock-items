@@ -11,7 +11,7 @@
 
         swordCraftShape(exporter, ModItems.ROGUE_SWORD, Items.GOLD_BLOCK, Items.STICK);
 
-        swordCraftShape(exporter, ModItems.NECON_BLADE, ModItems.WITHER_CATALYST, ModItems.NECRON_HANDLE);
+        swordCraftShape(exporter, ModItems.NECRON_BLADE, ModItems.WITHER_CATALYST, ModItems.NECRON_HANDLE);
 
         bigSwordCraftShape(exporter, ModItems.ASPECT_OF_THE_END, ModItems.ABSOLUTE_ENDER_PEARL, Items.STICK);
         bigSwordCraftShape(exporter, ModItems.ASPECT_OF_THE_VOID, ModItems.TESSELATED_ENDER_PEARL, ModItems.ASPECT_OF_THE_END);
@@ -36,7 +36,7 @@
         addScrollsToWitherBlade(exporter, ModItems.HYPERION_SCROLLED, ModItems.HYPERION);
         addScrollsToWitherBlade(exporter, ModItems.SCYLLA_SCROLLED, ModItems.SCYLLA);
         addScrollsToWitherBlade(exporter, ModItems.ASTRAEA_SCROLLED, ModItems.ASTRAEA);
-        addScrollsToWitherBlade(exporter, ModItems.NECON_BLADE_SCROLLED, ModItems.NECON_BLADE);
+        addScrollsToWitherBlade(exporter, ModItems.NECRON_BLADE_SCROLLED, ModItems.NECRON_BLADE);
 
         witherItemsCraftShape(exporter, ModItems.VALKYRIE, ModItems.DIAMANTE_HANDLE, ModTags.Items.NECRON_BLADES);
         witherItemsCraftShape(exporter, ModItems.HYPERION, ModItems.LASR_EYE, ModTags.Items.NECRON_BLADES);
