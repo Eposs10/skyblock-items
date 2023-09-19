@@ -49,6 +49,11 @@
         witherItemsCraftShape(exporter, ModItems.ASTRAEA_SCROLLED, ModItems.JOLLY_PINK_ROCK, ModTags.Items.SCROLLED_NECRON_BLADES);
 
 
+        offerNetheriteLikeUpgradeRecipe(exporter, ModItems.DRAGON_HELMET, ModItems.WITHER_FRAGMENT, ModItems.WITHER_CATALYST, RecipeCategory.COMBAT, ModItems.WITHER_HELMET);
+        offerNetheriteLikeUpgradeRecipe(exporter, ModItems.DRAGON_CHESTPLATE, ModItems.WITHER_FRAGMENT, ModItems.WITHER_CATALYST, RecipeCategory.COMBAT, ModItems.WITHER_CHESTPLATE);
+        offerNetheriteLikeUpgradeRecipe(exporter, ModItems.DRAGON_LEGGINGS, ModItems.WITHER_FRAGMENT, ModItems.WITHER_CATALYST, RecipeCategory.COMBAT, ModItems.WITHER_LEGGINGS);
+        offerNetheriteLikeUpgradeRecipe(exporter, ModItems.DRAGON_BOOTS, ModItems.WITHER_FRAGMENT, ModItems.WITHER_CATALYST, RecipeCategory.COMBAT, ModItems.WITHER_BOOTS);
+
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_HELMETS, ModItems.DIAMANTE_HANDLE, ModItems.DIAMANTE_HANDLE, RecipeCategory.COMBAT, ModItems.NECRON_HELMET);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_CHESTPLATES, ModItems.DIAMANTE_HANDLE, ModItems.DIAMANTE_HANDLE, RecipeCategory.COMBAT, ModItems.NECRON_CHESTPLATE);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_LEGGINGS, ModItems.DIAMANTE_HANDLE, ModItems.DIAMANTE_HANDLE, RecipeCategory.COMBAT, ModItems.NECRON_LEGGINGS);
