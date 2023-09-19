@@ -101,6 +101,16 @@ public class MobLootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
+            if (BLAZE_ID.equals(id)) {
+                var poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f))   // Drop Chance 1 = 100%
+                        .with(ItemEntry.builder(ModItems.WITHER_FRAGMENT)) // Item
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build()); // Item count
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+
 
 
             if (BASTION_TREASURE_ID.equals(id)) {
