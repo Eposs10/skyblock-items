@@ -1,6 +1,20 @@
 # Item list
 
 ```java
+        public static final Item DRAGON_HELMET = registerPlayerHeadItem("dragon_helmet",
+            new PlayerHeadItemWithRarity(Blocks.PLAYER_HEAD, Blocks.PLAYER_WALL_HEAD, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY"));
+    public static final Item WITHER_HELMET = registerPlayerHeadItem("wither_helmet",
+            new PlayerHeadItemWithRarity(Blocks.PLAYER_HEAD, Blocks.PLAYER_WALL_HEAD, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY"));
+    public static final Item NECRON_HELMET = registerPlayerHeadItem("necron_helmet",
+            new PlayerHeadItemWithRarity(Blocks.PLAYER_HEAD, Blocks.PLAYER_WALL_HEAD, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC"));
+    public static final Item STORM_HELMET = registerPlayerHeadItem("storm_helmet",
+            new PlayerHeadItemWithRarity(Blocks.PLAYER_HEAD, Blocks.PLAYER_WALL_HEAD, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC"));
+    public static final Item MAXOR_HELMET = registerPlayerHeadItem("maxor_helmet",
+            new PlayerHeadItemWithRarity(Blocks.PLAYER_HEAD, Blocks.PLAYER_WALL_HEAD, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC"));
+    public static final Item GOLDOR_HELMET = registerPlayerHeadItem("goldor_helmet",
+            new PlayerHeadItemWithRarity(Blocks.PLAYER_HEAD, Blocks.PLAYER_WALL_HEAD, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC"));
+
+
     public static final Item ROGUE_SWORD = registerItem("rogue_sword",
             new RogueSword(ModItemMaterial.ZERO_POINT_FIVE_DIA, 2, -2.4f,  new FabricItemSettings().maxCount(1), "COMMON", "SWORD"));
 
@@ -13,13 +27,13 @@
             new WeaponWithRarity(ModItemMaterial.DRAGON_FRAGMENT, 5, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "LEGENDARY", "SWORD"));
 
     public static final Item SILENT_DEATH = registerItem("silent_death",
-            new WeaponWithRarity(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1), "EPIC", "SWORD"));
+            new SilentDeath(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1), "EPIC", "SWORD"));
 
     public static final Item FLOWER_OF_TRUTH = registerItem("flower_of_truth",
             new WeaponWithRarity(ModItemMaterial.ZERO_POINT_FIVE_DIA, 3, -2.4f, new FabricItemSettings().maxCount(1), "LEGENDARY", "SWORD"));
 
     public static final Item YETI_SWORD = registerItem("yeti_sword",
-            new WeaponWithRarity(ModItemMaterial.ZERO_POINT_FIVE_DIA, 2, -2.4f, new FabricItemSettings().maxCount(1), "LEGENDARY", "SWORD"));
+            new YetiSword(ModItemMaterial.ZERO_POINT_FIVE_DIA, 2, -2.4f, new FabricItemSettings().maxCount(1), "LEGENDARY", "SWORD"));
 
     public static final Item GIANT_SWORD = registerItem("giant_sword",
             new WeaponWithRarity(ModItemMaterial.DRAGON_FRAGMENT, 7, -2.4f, new FabricItemSettings().maxCount(1).fireproof(), "MYTHIC", "LONGSWORD"));
@@ -53,8 +67,8 @@
     public static final Item TERMINATOR = registerItem("terminator", new Terminator(new FabricItemSettings().maxCount(1).fireproof()));
 
 
-    public static final Item DRAGON_HELMET = registerItem("dragon_helmet",
-            new ArmorItemWithRarity(ModArmorMaterials.DRAGON_FRAGMENT, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "LEGENDARY"));
+    public static final Item DRAGON_HELMET_DUMMY = registerItem("dragon_helmet_dummy",
+            new ArmorItemWithRarity(ModArmorMaterials.DRAGON_FRAGMENT, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "LEGENDARY", true));
     public static final Item DRAGON_CHESTPLATE = registerItem("dragon_chestplate",
             new ArmorItemWithRarity(ModArmorMaterials.DRAGON_FRAGMENT, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "LEGENDARY"));
     public static final Item DRAGON_LEGGINGS = registerItem("dragon_leggings",
@@ -62,8 +76,8 @@
     public static final Item DRAGON_BOOTS = registerItem("dragon_boots",
             new ArmorItemWithRarity(ModArmorMaterials.DRAGON_FRAGMENT, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "LEGENDARY"));
 
-    public static final Item WITHER_HELMET = registerItem("wither_helmet",
-            new ArmorItemWithRarity(ModArmorMaterials.WITHER, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "LEGENDARY"));
+    public static final Item WITHER_HELMET_DUMMY = registerItem("wither_helmet_dummy",
+            new ArmorItemWithRarity(ModArmorMaterials.WITHER, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "LEGENDARY", true));
     public static final Item WITHER_CHESTPLATE = registerItem("wither_chestplate",
             new ArmorItemWithRarity(ModArmorMaterials.WITHER, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "LEGENDARY"));
     public static final Item WITHER_LEGGINGS = registerItem("wither_leggings",
@@ -71,8 +85,8 @@
     public static final Item WITHER_BOOTS = registerItem("wither_boots",
             new ArmorItemWithRarity(ModArmorMaterials.WITHER, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "LEGENDARY"));
 
-    public static final Item NECRON_HELMET = registerItem("necron_helmet",
-            new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC"));
+    public static final Item NECRON_HELMET_DUMMY = registerItem("necron_helmet_dummy",
+            new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item NECRON_CHESTPLATE = registerItem("necron_chestplate",
             new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "MYTHIC"));
     public static final Item NECRON_LEGGINGS = registerItem("necron_leggings",
@@ -80,8 +94,8 @@
     public static final Item NECRON_BOOTS = registerItem("necron_boots",
             new ArmorItemWithRarity(ModArmorMaterials.NECRON, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "MYTHIC"));
 
-    public static final Item STORM_HELMET = registerItem("storm_helmet",
-            new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC"));
+    public static final Item STORM_HELMET_DUMMY = registerItem("storm_helmet_dummy",
+            new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item STORM_CHESTPLATE = registerItem("storm_chestplate",
             new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "MYTHIC"));
     public static final Item STORM_LEGGINGS = registerItem("storm_leggings",
@@ -89,8 +103,8 @@
     public static final Item STORM_BOOTS = registerItem("storm_boots",
             new ArmorItemWithRarity(ModArmorMaterials.STORM, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "MYTHIC"));
 
-    public static final Item MAXOR_HELMET = registerItem("maxor_helmet",
-            new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC"));
+    public static final Item MAXOR_HELMET_DUMMY = registerItem("maxor_helmet_dummy",
+            new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item MAXOR_CHESTPLATE = registerItem("maxor_chestplate",
             new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "MYTHIC"));
     public static final Item MAXOR_LEGGINGS = registerItem("maxor_leggings",
@@ -98,8 +112,8 @@
     public static final Item MAXOR_BOOTS = registerItem("maxor_boots",
             new ArmorItemWithRarity(ModArmorMaterials.MAXOR, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), "MYTHIC"));
 
-    public static final Item GOLDOR_HELMET = registerItem("goldor_helmet",
-            new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC"));
+    public static final Item GOLDOR_HELMET_DUMMY = registerItem("goldor_helmet_dummy",
+            new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), "MYTHIC", true));
     public static final Item GOLDOR_CHESTPLATE = registerItem("goldor_chestplate",
             new ArmorItemWithRarity(ModArmorMaterials.GOLDOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), "MYTHIC"));
     public static final Item GOLDOR_LEGGINGS = registerItem("goldor_leggings",
@@ -112,6 +126,12 @@
             new ItemWithRarity(new FabricItemSettings().maxCount(16), "UNCOMMON", "ITEM"));
     public static final Item TESSELATED_ENDER_PEARL = registerItem("tesselated_ender_pearl",
             new ItemWithRarity(new FabricItemSettings().maxCount(16), "RARE", "ITEM"));
+
+    public static final Item SILENT_DUST = registerItem("silent_dust",
+            new ItemWithRarity(new FabricItemSettings().maxCount(16), "RARE", "ITEM"));
+    public static final Item DEATH_POWDER = registerItem("death_powder",
+            new ItemWithRarity(new FabricItemSettings().maxCount(16), "RARE", "ITEM"));
+
 
     public static final Item WITHER_CATALYST = registerItem("wither_catalyst", new ItemWithRarity(new FabricItemSettings(), "RARE", "ITEM"));
     public static final Item WITHER_FRAGMENT = registerItem("wither_fragment", new ItemWithRarity(new FabricItemSettings(), "EPIC", "ITEM"));
