@@ -1,26 +1,35 @@
 # Recipes
 
 ```java
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
+        customHeadToHelmetItem(exporter, ModItems.DRAGON_HELMET, ModItems.ABSOLUTE_ENDER_PEARL, ModItems.DRAGON_HELMET_DUMMY);
+        customHeadToHelmetItem(exporter, ModItems.WITHER_HELMET, Items.WITHER_SKELETON_SKULL, ModItems.WITHER_HELMET_DUMMY);
+        customHeadToHelmetItem(exporter, ModItems.NECRON_HELMET, Items.WITHER_SKELETON_SKULL, ModItems.NECRON_HELMET_DUMMY);
+        customHeadToHelmetItem(exporter, ModItems.STORM_HELMET, Items.WITHER_SKELETON_SKULL, ModItems.STORM_HELMET_DUMMY);
+        customHeadToHelmetItem(exporter, ModItems.MAXOR_HELMET, Items.WITHER_SKELETON_SKULL, ModItems.MAXOR_HELMET_DUMMY);
+        customHeadToHelmetItem(exporter, ModItems.GOLDOR_HELMET, Items.WITHER_SKELETON_SKULL, ModItems.GOLDOR_HELMET_DUMMY);
+
         offerNetheriteLikeUpgradeRecipe(exporter, Items.NETHERITE_SWORD, ModItems.DRAGON_FRAGMENT, ModItems.TESSELATED_ENDER_PEARL, RecipeCategory.COMBAT, ModItems.ASPECT_OF_THE_DRAGONS);
 
-        offerNetheriteLikeUpgradeRecipe(exporter, Items.NETHERITE_HELMET, ModItems.DRAGON_FRAGMENT, ModItems.TESSELATED_ENDER_PEARL, RecipeCategory.COMBAT, ModItems.DRAGON_HELMET);
+        offerNetheriteLikeUpgradeRecipe(exporter, Items.NETHERITE_HELMET, ModItems.DRAGON_FRAGMENT, ModItems.TESSELATED_ENDER_PEARL, RecipeCategory.COMBAT, ModItems.DRAGON_HELMET_DUMMY);
         offerNetheriteLikeUpgradeRecipe(exporter, Items.NETHERITE_CHESTPLATE, ModItems.DRAGON_FRAGMENT, ModItems.TESSELATED_ENDER_PEARL, RecipeCategory.COMBAT, ModItems.DRAGON_CHESTPLATE);
         offerNetheriteLikeUpgradeRecipe(exporter, Items.NETHERITE_LEGGINGS, ModItems.DRAGON_FRAGMENT, ModItems.TESSELATED_ENDER_PEARL, RecipeCategory.COMBAT, ModItems.DRAGON_LEGGINGS);
         offerNetheriteLikeUpgradeRecipe(exporter, Items.NETHERITE_BOOTS, ModItems.DRAGON_FRAGMENT, ModItems.TESSELATED_ENDER_PEARL, RecipeCategory.COMBAT, ModItems.DRAGON_BOOTS);
 
-        swordCraftShape(exporter, ModItems.ROGUE_SWORD, Items.GOLD_BLOCK, Items.STICK);
+        swordCraftShape(exporter, ModItems.ROGUE_SWORD, Items.GOLD_BLOCK, Items.GOLD_BLOCK, Items.STICK);
 
-        swordCraftShape(exporter, ModItems.NECRON_BLADE, ModItems.WITHER_CATALYST, ModItems.NECRON_HANDLE);
+        swordCraftShape(exporter, ModItems.NECRON_BLADE, ModItems.WITHER_CATALYST, ModItems.WITHER_CATALYST, ModItems.NECRON_HANDLE);
 
         bigSwordCraftShape(exporter, ModItems.ASPECT_OF_THE_END, ModItems.ABSOLUTE_ENDER_PEARL, Items.STICK);
         bigSwordCraftShape(exporter, ModItems.ASPECT_OF_THE_VOID, ModItems.TESSELATED_ENDER_PEARL, ModItems.ASPECT_OF_THE_END);
 
-        swordCraftShape(exporter, ModItems.YETI_SWORD, Items.BLUE_ICE, ModItems.TRUE_ICE);
+        swordCraftShape(exporter, ModItems.YETI_SWORD, Items.BLUE_ICE, Items.BLUE_ICE, ModItems.TRUE_ICE);
 
         recipe8x1(exporter, ModItems.FLOWER_OF_TRUTH, Items.WITHER_ROSE, ModItems.ANCIENT_ROSE, RecipeCategory.COMBAT);
 
         offerNetheriteLikeUpgradeRecipe(exporter, ModItems.ASPECT_OF_THE_DRAGONS, ModItems.GOLEM_ROSE, ModItems.ANCIENT_ROSE, RecipeCategory.COMBAT, ModItems.GIANT_SWORD);
+
+        swordCraftShape(exporter, ModItems.SILENT_DEATH, ModItems.SILENT_DUST, ModItems.DEATH_POWDER, Items.STICK);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DARK_BLADE, 1)
                 .pattern("  #")
@@ -49,27 +58,27 @@
         witherItemsCraftShape(exporter, ModItems.ASTRAEA_SCROLLED, ModItems.JOLLY_PINK_ROCK, ModTags.Items.SCROLLED_NECRON_BLADES);
 
 
-        offerNetheriteLikeUpgradeRecipe(exporter, ModItems.DRAGON_HELMET, ModItems.WITHER_FRAGMENT, ModItems.WITHER_CATALYST, RecipeCategory.COMBAT, ModItems.WITHER_HELMET);
+        offerNetheriteLikeUpgradeRecipe(exporter, ModItems.DRAGON_HELMET_DUMMY, ModItems.WITHER_FRAGMENT, ModItems.WITHER_CATALYST, RecipeCategory.COMBAT, ModItems.WITHER_HELMET_DUMMY);
         offerNetheriteLikeUpgradeRecipe(exporter, ModItems.DRAGON_CHESTPLATE, ModItems.WITHER_FRAGMENT, ModItems.WITHER_CATALYST, RecipeCategory.COMBAT, ModItems.WITHER_CHESTPLATE);
         offerNetheriteLikeUpgradeRecipe(exporter, ModItems.DRAGON_LEGGINGS, ModItems.WITHER_FRAGMENT, ModItems.WITHER_CATALYST, RecipeCategory.COMBAT, ModItems.WITHER_LEGGINGS);
         offerNetheriteLikeUpgradeRecipe(exporter, ModItems.DRAGON_BOOTS, ModItems.WITHER_FRAGMENT, ModItems.WITHER_CATALYST, RecipeCategory.COMBAT, ModItems.WITHER_BOOTS);
 
-        offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_HELMETS, ModItems.DIAMANTE_HANDLE, ModItems.DIAMANTE_HANDLE, RecipeCategory.COMBAT, ModItems.NECRON_HELMET);
+        offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_HELMETS, ModItems.DIAMANTE_HANDLE, ModItems.DIAMANTE_HANDLE, RecipeCategory.COMBAT, ModItems.NECRON_HELMET_DUMMY);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_CHESTPLATES, ModItems.DIAMANTE_HANDLE, ModItems.DIAMANTE_HANDLE, RecipeCategory.COMBAT, ModItems.NECRON_CHESTPLATE);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_LEGGINGS, ModItems.DIAMANTE_HANDLE, ModItems.DIAMANTE_HANDLE, RecipeCategory.COMBAT, ModItems.NECRON_LEGGINGS);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_BOOTS, ModItems.DIAMANTE_HANDLE, ModItems.DIAMANTE_HANDLE, RecipeCategory.COMBAT, ModItems.NECRON_BOOTS);
 
-        offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_HELMETS, ModItems.LASR_EYE, ModItems.LASR_EYE, RecipeCategory.COMBAT, ModItems.STORM_HELMET);
+        offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_HELMETS, ModItems.LASR_EYE, ModItems.LASR_EYE, RecipeCategory.COMBAT, ModItems.STORM_HELMET_DUMMY);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_CHESTPLATES, ModItems.LASR_EYE, ModItems.LASR_EYE, RecipeCategory.COMBAT, ModItems.STORM_CHESTPLATE);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_LEGGINGS, ModItems.LASR_EYE, ModItems.LASR_EYE, RecipeCategory.COMBAT, ModItems.STORM_LEGGINGS);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_BOOTS, ModItems.LASR_EYE, ModItems.LASR_EYE, RecipeCategory.COMBAT, ModItems.STORM_BOOTS);
 
-        offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_HELMETS, ModItems.BIGFOOT_LASSO, ModItems.BIGFOOT_LASSO, RecipeCategory.COMBAT, ModItems.MAXOR_HELMET);
+        offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_HELMETS, ModItems.BIGFOOT_LASSO, ModItems.BIGFOOT_LASSO, RecipeCategory.COMBAT, ModItems.MAXOR_HELMET_DUMMY);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_CHESTPLATES, ModItems.BIGFOOT_LASSO, ModItems.BIGFOOT_LASSO, RecipeCategory.COMBAT, ModItems.MAXOR_CHESTPLATE);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_LEGGINGS, ModItems.BIGFOOT_LASSO, ModItems.BIGFOOT_LASSO, RecipeCategory.COMBAT, ModItems.MAXOR_LEGGINGS);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_BOOTS, ModItems.BIGFOOT_LASSO, ModItems.BIGFOOT_LASSO, RecipeCategory.COMBAT, ModItems.MAXOR_BOOTS);
 
-        offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_HELMETS, ModItems.JOLLY_PINK_ROCK, ModItems.JOLLY_PINK_ROCK, RecipeCategory.COMBAT, ModItems.GOLDOR_HELMET);
+        offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_HELMETS, ModItems.JOLLY_PINK_ROCK, ModItems.JOLLY_PINK_ROCK, RecipeCategory.COMBAT, ModItems.GOLDOR_HELMET_DUMMY);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_CHESTPLATES, ModItems.JOLLY_PINK_ROCK, ModItems.JOLLY_PINK_ROCK, RecipeCategory.COMBAT, ModItems.GOLDOR_CHESTPLATE);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_LEGGINGS, ModItems.JOLLY_PINK_ROCK, ModItems.JOLLY_PINK_ROCK, RecipeCategory.COMBAT, ModItems.GOLDOR_LEGGINGS);
         offerNetheriteLikeUpgradeRecipeWithTags(exporter, ModTags.Items.WITHER_BOOTS, ModItems.JOLLY_PINK_ROCK, ModItems.JOLLY_PINK_ROCK, RecipeCategory.COMBAT, ModItems.GOLDOR_BOOTS);
@@ -87,7 +96,7 @@
         offerNetheriteLikeUpgradeRecipe(exporter, ModItems.JUJU_SHORTBOW, ModItems.JUDGEMENT_CORE, ModItems.TESSELATED_ENDER_PEARL, RecipeCategory.COMBAT, ModItems.TERMINATOR);
     }
 
-    private static void recipe8x1(Consumer<RecipeJsonProvider> exporter, Item result, Item input, Item part, RecipeCategory category) {
+    private static void recipe8x1(RecipeExporter exporter, Item result, Item input, Item part, RecipeCategory category) {
         ShapedRecipeJsonBuilder.create(category, result, 1)
                 .pattern("###")
                 .pattern("#b#")
@@ -99,7 +108,7 @@
                 .offerTo(exporter, new Identifier(getRecipeName(result)));
     }
 
-    private static void offer3x3CompactingRecipe(Consumer<RecipeJsonProvider> exporter, Item result, Item input, RecipeCategory category) {
+    private static void offer3x3CompactingRecipe(RecipeExporter exporter, Item result, Item input, RecipeCategory category) {
         ShapedRecipeJsonBuilder.create(category, result, 1)
                 .pattern("###")
                 .pattern("###")
@@ -109,19 +118,21 @@
                 .offerTo(exporter, new Identifier(getRecipeName(result) + "_3x3"));
     }
 
-    private static void swordCraftShape(Consumer<RecipeJsonProvider> exporter, Item result, Item blade, Item stick) {
+    private static void swordCraftShape(RecipeExporter exporter, Item result, Item bladeTop, Item bladeBottom, Item stick) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, result, 1)
-                .pattern("#")
-                .pattern("#")
+                .pattern("1")
+                .pattern("2")
                 .pattern("s")
-                .input('#', blade)
+                .input('1', bladeTop)
+                .input('2', bladeBottom)
                 .input('s', stick)
-                .criterion(hasItem(blade), conditionsFromItem(blade))
+                .criterion(hasItem(bladeTop), conditionsFromItem(bladeTop))
+                .criterion(hasItem(bladeBottom), conditionsFromItem(bladeBottom))
                 .criterion(hasItem(stick), conditionsFromItem(stick))
                 .offerTo(exporter, new Identifier(getRecipeName(result) + "_sword"));
     }
 
-    private static void bigSwordCraftShape(Consumer<RecipeJsonProvider> exporter, Item result, Item blade, Item stick) {
+    private static void bigSwordCraftShape(RecipeExporter exporter, Item result, Item blade, Item stick) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, result, 1)
                 .pattern("###")
                 .pattern("###")
@@ -133,7 +144,7 @@
                 .offerTo(exporter, new Identifier(getRecipeName(result) + "_big_sword"));
     }
 
-    private static void witherItemsCraftShape(Consumer<RecipeJsonProvider> exporter, Item result, Item part, TagKey<Item> inputItems) {
+    private static void witherItemsCraftShape(RecipeExporter exporter, Item result, Item part, TagKey<Item> inputItems) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, result, 1)
                 .pattern("###")
                 .pattern("#a#")
@@ -144,7 +155,7 @@
                 .offerTo(exporter, new Identifier(getRecipeName(result) + "_wither_crafting"));
     }
 
-    private static void addScrollsToWitherBlade(Consumer<RecipeJsonProvider> exporter, Item result, Item input) {
+    private static void addScrollsToWitherBlade(RecipeExporter exporter, Item result, Item input) {
         result.postProcessNbt(input.getDefaultStack().getNbt());
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, result, 1)
                 .pattern(" 1 ")
@@ -163,7 +174,7 @@
                 .offerTo(exporter, new Identifier(getRecipeName(result)  + "_add_scrolls"));
     }
 
-    private static void offerNetheriteLikeUpgradeRecipe(Consumer<RecipeJsonProvider> exporter, Item input, Item template, Item addition, RecipeCategory category, Item result) {
+    private static void offerNetheriteLikeUpgradeRecipe(RecipeExporter exporter, Item input, Item template, Item addition, RecipeCategory category, Item result) {
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(template),
                         Ingredient.ofItems(input),
@@ -175,7 +186,7 @@
                 .offerTo(exporter, RecipeProvider.getItemPath(result) + "_smithing");
     }
 
-    private static void offerNetheriteLikeUpgradeRecipeWithTags(Consumer<RecipeJsonProvider> exporter, TagKey<Item> input, Item template, Item addition, RecipeCategory category, Item result) {
+    private static void offerNetheriteLikeUpgradeRecipeWithTags(RecipeExporter exporter, TagKey<Item> input, Item template, Item addition, RecipeCategory category, Item result) {
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(template),
                         Ingredient.fromTag(input),
@@ -183,4 +194,16 @@
                         category, result)
                 .criterion(hasItem(template), conditionsFromItem(template))
                 .offerTo(exporter, RecipeProvider.getItemPath(result) + "_smithing");
+    }
+
+    private static void customHeadToHelmetItem(RecipeExporter exporter, Item input, Item addition, Item output) {
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.RECOMBOBULATOR_3000),
+                        Ingredient.ofItems(input),
+                        Ingredient.ofItems(addition),
+                        RecipeCategory.COMBAT, output)
+                .criterion(hasItem(addition), conditionsFromItem(addition))
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .criterion(hasItem(ModItems.RECOMBOBULATOR_3000), conditionsFromItem(ModItems.RECOMBOBULATOR_3000))
+                .offerTo(exporter, RecipeProvider.getItemPath(output) + "_head_to_helmet");
     }
