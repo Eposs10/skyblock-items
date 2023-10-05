@@ -10,11 +10,14 @@ public class MobLootTableModifiers {
     private static final Identifier POLAR_BEAR_ID = new Identifier("minecraft", "entities/polar_bear");
     private static final Identifier IRON_GOLEM_ID = new Identifier("minecraft", "entities/iron_golem");
     private static final Identifier ELDER_GUARDIAN_ID = new Identifier("minecraft", "entities/elder_guardian");
+    private static final Identifier BLAZE_ID = new Identifier("minecraft", "entities/blaze");
+    private static final Identifier CREEPER_ID = new Identifier("minecraft", "entities/creeper");
 
     private static final Identifier BASTION_TREASURE_ID = new Identifier("minecraft", "chests/bastion_treasure");
     private static final Identifier BASTION_OTHER_ID = new Identifier("minecraft", "chests/bastion_other");
     private static final Identifier BASTION_HOGLIN_STABLE_ID = new Identifier("minecraft", "chests/bastion_hoglin_stable");
-    private static final Identifier BASTION_bridge_ID = new Identifier("minecraft", "chests/bastion_hoglin_bridge");
+    private static final Identifier BASTION_BRIDGE_ID = new Identifier("minecraft", "chests/bastion_hoglin_bridge");
+    private static final Identifier ANCIENT_CITY_ID = new Identifier("minecraft", "chests/ancient_city");
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) -> {
@@ -111,6 +114,16 @@ public class MobLootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
+            if (CREEPER_ID.equals(id)) {
+                var poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.01f))   // Drop Chance 1 = 100%
+                        .with(ItemEntry.builder(ModItems.DEATH_POWDER)) // Item
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build()); // Item count
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+
 
 
             if (BASTION_TREASURE_ID.equals(id)) {
@@ -121,12 +134,22 @@ public class MobLootTableModifiers {
                 witherUpgradeItemsLoot(tableBuilder, 2.0f);
             }
 
-            if (BASTION_bridge_ID.equals(id)) {
+            if (BASTION_BRIDGE_ID.equals(id)) {
                 witherUpgradeItemsLoot(tableBuilder, 2.0f);
             }
 
             if (BASTION_OTHER_ID.equals(id)) {
                 witherUpgradeItemsLoot(tableBuilder, 2.0f);
+            }
+
+            if (ANCIENT_CITY_ID.equals(id)) {
+                var poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.5f))   // Drop Chance 1 = 100%
+                        .with(ItemEntry.builder(ModItems.SILENT_DUST)) // Item
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build()); // Item count
+
+                tableBuilder.pool(poolBuilder.build());
             }
         }));
     }
