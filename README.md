@@ -6,7 +6,7 @@ Items: https://hypixel.net/
 
 Textures: https://furfsky.net/
 
-use `/recipe give @s *` to get all recipes
+use `/recipe give @s *` to get all recipes or view /sbrecipes
 
 Feedback: Discord @eposs
 
